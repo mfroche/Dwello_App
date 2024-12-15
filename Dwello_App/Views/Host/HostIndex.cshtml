@@ -1,0 +1,75 @@
+﻿@model Host
+
+<h1>Host Profile of Others</h1> 
+<hr />
+<br />
+
+
+<div class="profile-column">
+    <div class="profile">
+        <img src="#">
+        <h2 class="first-name">HostFirstName</h2>
+        <h4>Host</h4>
+    </div>
+    <br /> <br />
+    <div class="side-profile">
+        <div class="reviews">
+            <p class="no-of-reviews">0</p>
+            <h5>Reviews</h5>
+        </div>
+
+        <div class="rating">
+            <p class="total-rating">4.88</p>
+            <h5>Rating</h5>
+        </div>
+
+        <div class="date">
+            <p class="date-joined">January 1, 2000</p>
+            <h5> Started Hosting </h5>        
+        </div>
+    </div>
+</div>
+
+<br />
+<hr />
+<br />
+
+<div class="user-info-column">
+    <h1>About Host FirstName</h1>
+
+    <ul class="additional-info">
+        <li><p> Lives in Address</p></li>
+    </ul>
+
+    <p>UserDescription- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+
+<br />
+<hr />
+<br />
+
+<h2>Host Listing's Reviews </h2>
+<div class="review-container">
+    <p class="feedback"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..."</p>
+    <img src="#" alt="Profile Picture" />
+    <p class="review-user-name">UserFirstName</p>
+    <p class="review-date">December 2024</p>
+</div>
+<a asp-controller="Review" asp-action="ReviewIndex" asp-route-id="" class="outline-btn">Show More Reviews</a>
+
+<br />
+<hr />
+<br />
+
+<h2> Listings </h2>
+<div class="listings-container">
+    <img src="#" alt="Listing Image" />
+    <p class="listing-type">Condo</p>
+    <p class="listing-rating">4.9</p>
+    <p class="listing-location">Cebu City</p>
+</div>
+<a asp-controller="Listing" asp-action="ListingIndex" asp-route-id="" class="outline-btn">View All NoOfHostListing's Listings</a>
+
+
+
+

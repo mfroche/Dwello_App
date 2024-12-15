@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Dwello_App.props" />
+</Project>

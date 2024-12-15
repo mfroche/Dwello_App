@@ -1,0 +1,40 @@
+﻿
+<h1>Logged-In User's Host Profile</h1>
+<br />
+
+<hr />
+<ul>
+    <li><a asp-controller="Bookings" asp-action="" class="outline-btn">Reservations</a>   </li>
+    <li><a asp-controller="Listings" asp-action="" class="outline-btn">Listings</a>    </li>
+    <li><a asp-controller="Listings" asp-action="" class="outline-btn">Earnings</a>    </li>
+</ul>
+<hr />
+
+<br />
+<h2>Welcome Logged-In HostFirstName</h2>
+<br />
+
+<a asp-controller="Listing" asp-action="AddListing" asp-route-id="" class="outline-btn">Create Listing</a>
+
+<br />
+<br />
+
+<h3>Your Reservations</h3>
+<a asp-controller="Bookings" asp-action="" class="outline-btn">All reservations (0)</a>
+
+<br />
+
+<ul>
+    <li><a asp-controller="Bookings" asp-action="" class="outline-btn">Checking Out</a>    </li>
+    <li><a asp-controller="Bookings" asp-action="" class="outline-btn">Currently Hosting</a>    </li>
+    <li><a asp-controller="Bookings" asp-action="" class="outline-btn">Completed</a>    </li>
+    <li><a asp-controller="Bookings" asp-action="" class="outline-btn">Cancelled</a>    </li>
+    <li><a asp-controller="Bookings" asp-action="" class="outline-btn">All</a>    </li>
+</ul>
+
+<div class="listings-container">
+    <img src="#" alt="Listing Image" />
+    <p class="listing-type">Condo</p>
+    <p class="listing-rating">4.9</p>
+    <p class="listing-location">Cebu City</p>
+</div>

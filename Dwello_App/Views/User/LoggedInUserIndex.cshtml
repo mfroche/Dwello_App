@@ -1,0 +1,85 @@
+﻿@model List<User> 
+
+<h1>Logged-In User's Guest Profile</h1>
+<hr />
+<br />
+
+@foreach(var user in Model)
+{
+    @if(user.UserId == 2)
+    {
+        <a asp-controller="Host" asp-action="LoggedInHostIndex" class="outline-btn">Switch to Hosting</a>
+        <hr />
+        <br />
+
+        <div class="profile-column">
+            <div class="profile">
+                <img src="images.png">
+                <h2 class="first-name">@user.UserFirstName</h2>
+                <h4>Guest</h4>
+            </div>
+            <br /> <br />
+
+            <div class="side-profile">
+                <div class="reviews">
+                    <p class="no-of-reviews">0</p>
+                    <h5>No of Reviews</h5>
+                </div>
+
+                <div class="date">               
+                    <p class="date-joined">@user.DateJoined.ToString("MMMM d, yyyy")</p>
+                    <h5> Date Joined</h5>
+                </div>
+            </div>
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <div class="user-info-column">
+            <h1>About @user.UserFirstName</h1>
+
+            <ul class="additional-info">
+                <li><p> Lives in @user.UserAddress</p></li>
+            </ul>
+
+            <p> @user.UserDescription </p>
+
+            <ul>
+                <li><a asp-controller="User" asp-action="UserEdit" asp-route-id="@user.UserId" class="outline-btn">Edit Profile</a>    </li>
+                <li><a asp-controller="Review" asp-action="ReviewIndex" asp-route-id="@user.UserId" class="outline-btn">All Reviews</a>   </li>
+                <li><a asp-controller="Booking" asp-action="BookingIndex" asp-route-id="@user.UserId" class="outline-btn">All Bookings</a>   </li>
+            </ul> 
+        </div>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2> Reviews by Me </h2>
+        <div class="review-container">
+            <p class="feedback"> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna..."</p>
+            <img src="#" alt="Profile Picture" />
+            <p class="review-user-name">UserFirstName</p>
+            <p class="review-date">December 2024</p>
+        </div>
+        <a asp-controller="Review" asp-action="ReviewIndex" asp-route-id="" class="outline-btn">Show All 10 Reviews</a>
+
+        <br />
+        <hr />
+        <br />
+
+        <h2> Bookings </h2>
+        <div class="booking-container">
+            <img src="#" alt="Booking Image" />
+            <p class="listing-type">Condo</p>
+            <p class="listing-rating">4.9</p>
+            <p class="listing-location">Cebu City</p>
+        </div>
+        <a asp-controller="Booking" asp-action="BookingIndex" asp-route-id="@user.UserId" class="outline-btn">Show All 10 Bookings</a>
+    }
+}
+
+
+
